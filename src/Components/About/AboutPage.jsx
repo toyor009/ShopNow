@@ -22,27 +22,25 @@ const AboutPage = () => {
   return (
     <>
       <div className="aboutSection">
-        <h2>About Summer</h2>
+        <h2>About US</h2>
         <img src={about1} alt="" />
         <div className="aboutContent">
           <h3>Our Story</h3>
           <h6>
-          The AgriSync Marketplace is an extension of AgriSync's core services, designed to enhance the agricultural support ecosystem. It connects farmers with various agricultural advisors and service providers, facilitating a more efficient exchange of knowledge and resources.
+            ShopToyor Marketplace is an evolution of our core services, built to transform and enhance the e-commerce experience. Our mission is to create a seamless, customer-centric platform where buyers and sellers connect effortlessly. By fostering innovation and trust, ShopToyor aims to reshape the way people shop online, making it more accessible and efficient for everyone
           </h6>
 
           <div className="content1">
             <div className="contentBox">
               <h5>Our Mission</h5>
               <p>
-                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                Our mission at ShopToyor is to create a seamless, customer-centric platform where buyers and sellers connect effortlessly. We aim to streamline the online shopping experience by providing intuitive tools, a secure environment, and personalized services that cater to the unique needs of each user. By simplifying transactions and fostering transparent communication, we empower both buyers and sellers to engage confidently. Through continuous innovation and a commitment to customer satisfaction, we strive to make e-commerce not only efficient but also enjoyable for everyone involved
               </p>
             </div>
             <div className="contentBox">
               <h5>Our Vision</h5>
               <p>
-                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                Our vision is to become a leading force in the e-commerce landscape, known for driving innovation and fostering meaningful connections between buyers and sellers worldwide. We aim to create a marketplace that transcends boundaries, offering a trusted, inclusive platform where businesses of all sizes can thrive. By setting new standards in customer experience, technology, and sustainability, ShopToyor envisions shaping the future of online commerce, making it more accessible, equitable, and efficient for all
               </p>
             </div>
           </div>
@@ -53,7 +51,7 @@ const AboutPage = () => {
             <div className="textContent">
               <h5>The Company</h5>
               <p>
-              The AgriSync plays a crucial role in modernizing agricultural practices by leveraging technology to connect farmers with the expertise they need. This integration of services helps address prevalent challenges in farming, ultimately aiming to improve
+              At ShopToyor, we are committed to delivering an exceptional e-commerce experience that empowers businesses and customers alike. Founded with a vision to simplify and enhance online shopping, our company is built on values of innovation, trust, and customer satisfaction. We strive to create a marketplace where convenience meets quality, allowing buyers and sellers to connect and thrive in a seamless, user-friendly environment.
               </p>
             </div>
           </div>

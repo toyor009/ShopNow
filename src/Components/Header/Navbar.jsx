@@ -45,11 +45,11 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <nav className="navBar">
         <div className="logoLinkContainer">
-          <div className="logoContainer">
+          {/* <div className="logoContainer">
             <Link to="/" onClick={scrollToTop}>
-              <img src={logo} alt="Logo" />
+              <img src={logo} alt="Logo" style={{width: '120px', height: '70px'}} />
             </Link>
-          </div>
+          </div> */}
           <div className="linkContainer">
             <ul>
               <li>

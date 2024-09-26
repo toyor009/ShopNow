@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
         <div className="footer_bottom">
           <p>
-            © 2024 AgriSync, Inc. All Rights Reserved.
+            © 2024 ShopToyor, Inc. All Rights Reserved.
           </p>
           <div className="footerLangCurrency">
             <div className="footerLang">

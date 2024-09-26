@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="heroMain">
         <div className="sectionleft">
           <p>New Trend</p>
-          <h1>Summer Sale Stylish</h1>
+          <h1>ShopToyor Sale Stylish</h1>
           <span>Limited Time Offer - Up to 60% off & Free Shipping</span>
           <div className="heroLink">
             <Link to="/shop" onClick={scrollToTop}>
