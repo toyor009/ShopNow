@@ -3,13 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Home from "../src/Pages/Home";
-import About from "../src/Pages/About";
-import Shop from "../src/Pages/Shop";
-import Contact from "../src/Pages/Contact";
-import Blog from "../src/Pages/Blog";
-import Header from "../src/Components/Header/Navbar";
-import Footer from "../src/Components/Footer/Footer";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Shop from "./Pages/Shop";
+import Contact from "./Pages/Contact";
+import Blog from "./Pages/Blog";
+import Header from "./Components/Header/Navbar";
+import Footer from "./Components/Footer/Footer";
 import ProductDetails from "./Pages/ProductDetails";
 import NotFound from "./Pages/NotFound";
 import ScrollToTop from "./Components/ScrollButton/ScrollToTop";

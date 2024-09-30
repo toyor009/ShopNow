@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="footer__container">
           <div className="footer_left">
             <div className="footer_logo_container">
-              <img src={logo} alt="" Z />
+              <img src={logo} alt="" />
             </div>
 
             <p>United Status of America</p>
