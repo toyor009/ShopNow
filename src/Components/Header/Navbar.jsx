@@ -64,11 +64,11 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <nav className="navBar">
         <div className="logoLinkContainer">
-          {/* <div className="logoContainer">
+          <div className="logoContainer">
             <Link to="/" onClick={scrollToTop}>
-              <img src={logo} alt="Logo" style={{width: '120px', height: '70px'}} />
+              <img src={logo} alt="Logo" style={{width: '100px', height: '70px', borderRadius: '8px'}} />
             </Link>
-          </div> */}
+          </div>
           <div className="linkContainer">
             <ul>
             {navMenus.map(({name, route}) => (
@@ -113,7 +113,7 @@ const Navbar = () => {
           )}
           <div className="logoContainer">
             <Link to="/">
-              <img src={logo} alt="Logo" />
+              <img src={logo} alt="Logo" style={{width: '150px', borderRadius: '8px'}} />
             </Link>
           </div>
           <Link to="/cart">

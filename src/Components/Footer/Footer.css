@@ -22,6 +22,11 @@
 
 .footer_logo_container {
   margin-bottom: 20px;
+
+  img {
+    width: 150px;
+    border-radius: 8px;
+  }
 }
 
 .footer_logo_container img {
@@ -83,7 +88,7 @@
 }
 
 .links_container ul li a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -5px;
   left: 0;

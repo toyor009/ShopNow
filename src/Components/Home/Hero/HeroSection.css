@@ -1,6 +1,6 @@
 .heroMain {
   background-color: #f4e5e0;
-  background-image: url("../../../Assets/slideshow-pattern.png");
+  background-image: url('../../../Assets/slideshow-pattern.png');
   background-size: cover;
   padding: 0 160px;
   display: flex;
@@ -24,7 +24,7 @@
 }
 
 .sectionleft p::before {
-  content: "";
+  content: '';
   display: block;
   width: 35px;
   height: 2px;
@@ -35,10 +35,19 @@
   transform: translateY(-50%);
 }
 
-.sectionleft h1 {
+.sectionleft h2 {
   font-size: 70px;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.sectionleft .brand-name {
+  font-size: 70px;
+  font-weight: 700;
+  color: #11a8ac;
+  span {
+    color: #fe8c0e;
+  }
 }
 
 .heroLink {
@@ -55,7 +64,7 @@
 }
 
 .sectionleft a::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
