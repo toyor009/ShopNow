@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import "./Navbar.css";
 
 import { useSelector } from "react-redux";
 
 import logo from "../../Assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { RiMenu2Line } from "react-icons/ri";
 import { FiSearch } from "react-icons/fi";
@@ -24,9 +24,23 @@ import { FaPinterest } from "react-icons/fa";
 import Badge from "@mui/material/Badge";
 
 const Navbar = () => {
+  const navMenus = [
+    {name: 'HOME', route: '/'},
+    {name: 'SHOP', route: '/shop'},
+    {name: 'BLOG', route: '/blog'},
+    {name: 'ABOUT', route: '/about'},
+    {name: 'CONTACT', route: '/contact'},
+  ]
   const cart = useSelector((state) => state.cart);
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const location = useLocation()
+
+  const currentRoute = useMemo(() => {
+    let route = location.pathname.toLowerCase().split('/')[1]
+    return route ? route : 'home'
+  }, [location.pathname])
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -40,6 +54,11 @@ const Navbar = () => {
     });
   };
 
+  const isActiveMenu = (menuName) => {
+    return menuName.toLowerCase() === currentRoute
+  }
+
+
   return (
     <>
       {/* Desktop Menu */}
@@ -52,31 +71,13 @@ const Navbar = () => {
           </div> */}
           <div className="linkContainer">
             <ul>
-              <li>
-                <Link to="/" onClick={scrollToTop}>
-                  HOME
+            {navMenus.map(({name, route}) => (
+              <li key={name}>
+                <Link to={route} className={isActiveMenu(name) ? 'active' : ''} onClick={scrollToTop}>
+                  {name}
                 </Link>
               </li>
-              <li>
-                <Link to="/shop" onClick={scrollToTop}>
-                  SHOP
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" onClick={scrollToTop}>
-                  BLOG
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" onClick={scrollToTop}>
-                  ABOUT
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" onClick={scrollToTop}>
-                  CONTACT
-                </Link>
-              </li>
+            ))}
             </ul>
           </div>
         </div>
