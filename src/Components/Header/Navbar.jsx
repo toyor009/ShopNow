@@ -58,6 +58,11 @@ const Navbar = () => {
     return menuName.toLowerCase() === currentRoute
   }
 
+  const handleMobileNav = () => {
+    toggleMobileMenu()
+    scrollToTop()
+  }
+
 
   return (
     <>
@@ -104,18 +109,18 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <nav>
+      <nav style={{position: 'sticky', top: 0, zIndex: 3}}>
         <div className="mobile-nav">
           {mobileMenuOpen ? (
             <MdOutlineClose size={22} onClick={toggleMobileMenu} />
           ) : (
             <RiMenu2Line size={22} onClick={toggleMobileMenu} />
           )}
-          <div className="logoContainer">
+          {/* <div className="logoContainer">
             <Link to="/">
               <img src={logo} alt="Logo" style={{width: '150px', borderRadius: '8px'}} />
             </Link>
-          </div>
+          </div> */}
           <Link to="/cart">
             <Badge
               badgeContent={cart.items.length === 0 ? "0" : cart.items.length}
@@ -141,31 +146,13 @@ const Navbar = () => {
             </div>
             <div className="mobile-menuList">
               <ul>
-                <li>
-                  <Link to="/" onClick={toggleMobileMenu}>
-                    HOME
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/shop" onClick={toggleMobileMenu}>
-                    SHOP
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" onClick={toggleMobileMenu}>
-                    BLOG
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" onClick={toggleMobileMenu}>
-                    ABOUT
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" onClick={toggleMobileMenu}>
-                    CONTACT
-                  </Link>
-                </li>
+                {navMenus.map(({name, route}) => (
+                  <li key={name}>
+                    <Link to={route} onClick={handleMobileNav}>
+                      {name}
+                    </Link>
+                  </li> 
+                  ))}
               </ul>
             </div>
           </div>
