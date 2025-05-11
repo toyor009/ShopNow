@@ -1,4 +1,4 @@
-# ShopToyor | E-commerce App
+# ShopNow | E-commerce App
 
 In the project directory, you can run:
 
