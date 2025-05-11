@@ -3,9 +3,10 @@ import "./LoginSignUp.css";
 import { Link } from "react-router-dom";
 
 const LoginSignUp = () => {
-  const [activeTab, setActiveTab] = useState("tabButton1");
+  const [activeTab, setActiveTab] = useState("login");
 
   const handleTab = (tab) => {
+    console.log('clicked!!!!')
     setActiveTab(tab);
   };
 
@@ -15,22 +16,22 @@ const LoginSignUp = () => {
         <div className="loginSignUpContainer">
           <div className="loginSignUpTabs">
             <p
-              onClick={() => handleTab("tabButton1")}
-              className={activeTab === "tabButton1" ? "active" : ""}
+              onClick={() => handleTab("login")}
+              className={activeTab === "login" ? "active" : ""}
             >
               Login
             </p>
             <p
-              onClick={() => handleTab("tabButton2")}
-              className={activeTab === "tabButton2" ? "active" : ""}
+              onClick={() => handleTab("register")}
+              className={activeTab === "register" ? "active" : ""}
             >
               Register
             </p>
           </div>
           <div className="loginSignUpTabsContent">
-            {/* tab1 */}
+            {/* Login Tab */}
 
-            {activeTab === "tabButton1" && (
+            {activeTab === "login" && (
               <div className="loginSignUpTabsContentLogin">
                 <form>
                   <input type="email" placeholder="Email address *" required />
@@ -49,7 +50,7 @@ const LoginSignUp = () => {
                 <div className="loginSignUpTabsContentLoginText">
                   <p>
                     No account yet?{" "}
-                    <span onClick={() => handleTab("tabButton2")}>
+                    <span onClick={() => handleTab("register")}>
                       Create Account
                     </span>
                   </p>
@@ -57,9 +58,9 @@ const LoginSignUp = () => {
               </div>
             )}
 
-            {/* Tab2 */}
+            {/* Register Tab */}
 
-            {activeTab === "tabButton2" && (
+            {activeTab === "register" && (
               <div className="loginSignUpTabsContentRegister">
                 <form>
                   <input type="text" placeholder="Username *" required />
@@ -80,6 +81,14 @@ const LoginSignUp = () => {
                   </p>
                   <button>Register</button>
                 </form>
+                <div className="loginSignUpTabsContentLoginText">
+                  <p>
+                    Have an account?{" "}
+                    <span onClick={() => handleTab("login")}>
+                      Login
+                    </span>
+                  </p>
+                </div>
               </div>
             )}
           </div>

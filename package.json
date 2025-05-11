@@ -1,7 +1,7 @@
 {
-  "name": "shop-toyor",
+  "name": "shop-now",
   "version": "0.1.0",
-  "description": "ShopToyor | Shop till you drop from out very best collections",
+  "description": "ShopNow | Shop till you drop from out very best collections",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.3",
